@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>{{ recipe.title }}</h1>
+  <h2>Written by: {{recipe.author.username}}</h2>
+  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
+  <p>{{post.text}}</p>
