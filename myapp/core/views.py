@@ -1,13 +1,15 @@
 # core/views.py 
 
 from flask import render_template, request, Blueprint
+from myapp.models import RecipePost
 
 core = Blueprint('core', __name__)
 
 @core.route('/')
 def index():
-    
-    return render_template('index.html')
+    page = request.args.get('page', 1, type=int)
+    recipe_posts = RecipePost.query.order_by(RecipePost.date.desc()).paginate(page=page, per_page=5)
+    return render_template('index.html', recipe_posts=recipe_posts)
 
 @core.route('/info')
 def info():

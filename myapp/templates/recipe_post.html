@@ -3,5 +3,16 @@
 <div class="jumbotron">
   <h1>{{ recipe.title }}</h1>
   <h2>Written by: {{recipe.author.username}}</h2>
-  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
-  <p>{{post.text}}</p>
+  <h3>Published: {{ recipe.date.strftime('%B %d, %Y') }}</h3>
+  <p>{{recipe.text}}</p>
+   {% if recipe.author == current_user %}
+     <div>
+       <a class="btn btn-secondary" href="{{ url_for('recipe_posts.update', recipe_post_id=recipe.id) }}">Update</a>
+       <br>
+       <form action="{{ url_for('recipe_posts.delete_post', recipe_post_id=recipe.id) }}" method="POST">
+        <input class="btn btn-danger" type="submit" value="Delete">
+      </form>
+     </div>
+   {% endif %}
+</div>
+{% endblock content %}
