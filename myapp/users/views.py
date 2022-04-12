@@ -3,7 +3,7 @@ from operator import methodcaller
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
 from myapp import db
-from myapp.models import User
+from myapp.models import User, RecipePost
 from myapp.users.forms import RegistrationForm, LoginForm, UpdateUserForm
 
 users = Blueprint('users', __name__) # dont forget to register this in __init__.py 
