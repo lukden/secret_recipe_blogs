@@ -56,7 +56,7 @@ def update(recipe_post_id):
         form.title.data = recipe_post.title
         form.text.data = recipe_post.text
 
-    return render_template('create_post.html',title='Updating',form=form)
+    return render_template('create_recipe.html',title='Updating',form=form)
 
 
 

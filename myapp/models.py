@@ -23,6 +23,12 @@ class User(db.Model, UserMixin):
         self.email = email
         self.username = username
         self.password_hash = generate_password_hash(password)
+    
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+    
+    def __repr__(self):
+        return f"Username {self.username}"
 
 class RecipePost(db.Model):
     __tablename__ = 'recipe_posts'
@@ -39,11 +45,4 @@ class RecipePost(db.Model):
 
     def __repr__(self):
         return f"Post ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
-
-#going to use this in our login view 
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
-    
-    def __repr__(self):
-        return f"Username {self.username}"
 
