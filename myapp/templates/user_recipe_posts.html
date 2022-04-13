@@ -8,15 +8,15 @@
         </div>
     {% for post in recipe_posts.items %}
     <h2>
-        <a href="{{url_for('recipe_posts.recipe_post', recipe_post_id=recipe.id)}}">{{recipe.title}}</a>
+        <a href="{{url_for('recipe_posts.recipe_post', recipe_post_id=post.id)}}">{{post.title}}</a>
     </h2>
-    Written By: <a href="{{url_for('users.user_posts', username=recipe.author.username)}}">{{recipe.author.username}}</a>
+    Written By: <a href="{{url_for('users.user_posts', username=post.author.username)}}">{{post.author.username}}</a>
 
     <p class="text-muted">
-        Published On: {{recipe.date.strftime("%y-%m-%d")}}
+        Published On: {{post.date.strftime("%y-%m-%d")}}
     </p>
     <br>
-    <p>{{recipe.text}}</p>
+    <p>{{post.text}}</p>
     <br>
     {% endfor %}
     </div>
