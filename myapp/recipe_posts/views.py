@@ -28,7 +28,7 @@ def create_recipe():
 @recipe_posts.route('/<int:recipe_post_id>') #make sure this is an integer 
 def recipe_post(recipe_post_id):
     recipe_post = RecipePost.query.get_or_404(recipe_post_id) # this recipe post id is not a string - we are querying for an int 
-    return render_template('recipe_post.html', title=recipe_post.title, date=recipe_post.date, recipe=recipe_post)
+    return render_template('recipe_post.html', title=recipe_post.title, date=recipe_post.date, post=recipe_post)
 
 
 # update a post 
@@ -57,8 +57,6 @@ def update(recipe_post_id):
         form.text.data = recipe_post.text
 
     return render_template('create_recipe.html',title='Updating',form=form)
-
-
 
 
 # delete post 

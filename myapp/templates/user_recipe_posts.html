@@ -1,18 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="jumbotron">
-  <h1>{{ recipe.title }}</h1>
-  <h2>Written by: {{recipe.author.username}}</h2>
-  <h3>Published: {{ recipe.date.strftime('%B %d, %Y') }}</h3>
-  <p>{{recipe.text}}</p>
-  {% if recipe.author == current_user %}
-    <div>
-      <a class="btn btn-secondary" href="{{ url_for('recipe_posts.update', recipe_post_id=recipe.id) }}">Update</a>
-      <br>
-      <form action="{{ url_for('recipe_posts.delete_recipe', recipe_post_id=recipe.id) }}" method="POST">
-        <input class="btn btn-danger" type="submit" value="Delete">
-      </form>
+    <div class="container">
+        <div class="jumbotron">
+            <div align="center">
+                <h1>Welcome to the page for {{user.username}}</h1>
+            </div>
+        </div>
+    {% for post in recipe_posts.items %}
+    <h2>
+        <a href="{{url_for('recipe_posts.recipe_post', recipe_post_id=recipe.id)}}">{{recipe.title}}</a>
+    </h2>
+    Written By: <a href="{{url_for('users.user_posts', username=recipe.author.username)}}">{{recipe.author.username}}</a>
+
+    <p class="text-muted">
+        Published On: {{recipe.date.strftime("%y-%m-%d")}}
+    </p>
+    <br>
+    <p>{{recipe.text}}</p>
+    <br>
+    {% endfor %}
     </div>
-  {% endif %}
-</div>
-{% endblock content %}
+
+    <nav aria-label="Page Navigation example">
+        <ul class="pagination justify-content-center">
+
+            {% for page_num in recipe_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if recipe_posts.page == page_num %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <a class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+
+
+{% endblock %}

@@ -69,3 +69,10 @@ def account():
         form.email.data = current_user.email
 
     return render_template('account.html', form=form)
+
+@users.route('/<username>')
+def user_posts(username):
+    page = request.args.get('page', 1, type=int)
+    user = User.query.filter_by(username=username).first_or_404()
+    recipe_posts = RecipePost.query.filter_by(author=user).order_by(RecipePost.date.desc()).paginate(page=page, per_page=5) 
+    return render_template('user_recipe_posts.html', recipe_posts=recipe_posts, user=user)
