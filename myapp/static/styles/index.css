@@ -19,23 +19,24 @@ body {
   opacity: 90%;
 }
 
-/* .card-body {
+.card-body {
   display: grid;
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-family: 'Josefin Slab', serif;
-} */
+}
 
 a {
   display: grid;
   color: rgb(40, 22, 22);
   font-family: 'Josefin Slab', serif;
+  font-size: 25px;
 }
 
 .jumbotron {
   text-align: center;
-  background-color: #440D0F;
-  padding: 5px;
+  background-color: #440d0f;
+  padding: 0px;
   width: 20%;
   color: white;
   margin: auto;
@@ -47,32 +48,68 @@ a {
   text-decoration: underline;
 }
 
+.recipe-btns {
+  border-color: white;
+  display: inline-flex;
+  gap: 100px;
+  padding: 5px;
+}
+
+.btn.btn-secondary,
+.btn.btn-danger {
+  border-color: white;
+  display: inline-flex;
+  padding: 10px 15px 10px 15px;
+}
+
 .btn {
   background-color: rgb(104, 7, 28);
   border-color: white;
+  padding: 10px;
+  width: 100%;
+  justify-content: inherit;
+  text-align: center;
+  gap: 0px;
 }
 
 .about {
   font-family: 'Josefin Slab', serif;
   font-size: 30px;
-  text-align: justify;
+  text-align: center;
   background-color: #440D0F;
-  padding: 5px;
-  width: 50%;
+  padding: 10px;
+  width: 48%;
   color: white;
-  margin: auto;
-  margin-top: 30px;
-  border: 0.6mm inset;
+  margin: inherit;
+  margin-top: 20px;
+  border: 1mm inset;
+  border-color: rgb(200, 223, 244);
 }
 
-p {
+.description {
   font-family: 'Josefin Slab', serif;
   font-size: 30px;
   text-align: center;
   background-color: #440D0F;
   padding: 5px;
-  width: 40%;
+  width: 100%;
   color: white;
   margin: auto;
   margin-top: 20px;
+}
+
+.recipe-card {
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
+  text-align: center;
+  background-color: #ffffffca;
+  padding: 10px;
+  width: 80%;
+  color: rgb(13, 4, 4);
+  margin: inherit;
+  margin-top: 20px;
+  border: 0.6mm groove;
+  border-radius: 3%;
+  border-color: rgb(5, 34, 34);
+  opacity: 90%;
 }

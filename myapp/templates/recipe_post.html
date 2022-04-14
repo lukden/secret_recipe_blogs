@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="jumbotron">
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/index.css')}}"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
+<div class="recipe-card">
   <h1>{{ post.title }}</h1>
   <h2>Written by: {{post.author.username}}</h2>
   <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
   <p>{{post.text}}</p>
   {% if post.author == current_user %}
-    <div>
+    <div class="recipe-btns">
       <a class="btn btn-secondary" href="{{ url_for('recipe_posts.update', recipe_post_id=post.id) }}">Update</a>
       <br>
       <form action="{{ url_for('recipe_posts.delete_post', recipe_post_id=post.id) }}" method="POST">
