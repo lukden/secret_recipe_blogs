@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <h1>What is Secret Recipe?</h1>
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/index.css')}}"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
+    <div class="about">
+        <h1 class="about">What is Secret Recipe?</h1>
         <p>Secret Recipe is a blog where you can share your favorite recipes and the stories behind them! Have any recipes family and friends can't get enough of? Share it here!</p>
     </div>
 

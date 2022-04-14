@@ -1,0 +1,15 @@
+.nav {
+  font-size: 25px;
+  background-color: #2f919e94;
+  color: white;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px 200px;
+  grid-area: auto;
+  gap: 100px;
+  text-align: right;
+}
+
+.nav-link {
+  display: inherit;
+  color: white;
+}

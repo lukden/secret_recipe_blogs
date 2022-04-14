@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/index.css')}}"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
     <div class="jumbotron">
         <h1>Recipes</h1>
     </div>
     <div class="container">
         {% for post in recipe_posts.items %}
             <div class="card">
-                <div class="car-boy">
-                    <h2>
+                <div class="card-body">
+                    <h2 class="card-text">
                         <a class="card-title" href="{{url_for('recipe_posts.recipe_post', recipe_post_id=post.id)}}">{{post.title}}</a>
                         <a href="{{url_for('users.user_posts', username=post.author.username)}}">Written by: {{post.author.username}}</a>
                     </h2>

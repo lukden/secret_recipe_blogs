@@ -1,0 +1,78 @@
+body {
+  background-color: #e8f3fc;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%23568259' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  
+}
+
+.card {
+  background-color: #fefffd;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  display: inline-flex;
+  grid-template-columns: 200px 200px;
+  width: 30%;
+  grid-template-rows: 100px 100px 100px;
+  border: 0.6mm groove;
+  border-radius: 3%;
+  border-color: rgb(5, 34, 34);
+  opacity: 90%;
+}
+
+/* .card-body {
+  display: grid;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: 'Josefin Slab', serif;
+} */
+
+a {
+  display: grid;
+  color: rgb(40, 22, 22);
+  font-family: 'Josefin Slab', serif;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #440D0F;
+  padding: 5px;
+  width: 20%;
+  color: white;
+  margin: auto;
+  margin-top: 20px;
+  border: 0.6mm inset;
+  border-radius: 5%;
+  border-color: rgb(3, 27, 27);
+  font-family: 'Caveat';
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: rgb(104, 7, 28);
+  border-color: white;
+}
+
+.about {
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
+  text-align: justify;
+  background-color: #440D0F;
+  padding: 5px;
+  width: 50%;
+  color: white;
+  margin: auto;
+  margin-top: 30px;
+  border: 0.6mm inset;
+}
+
+p {
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
+  text-align: center;
+  background-color: #440D0F;
+  padding: 5px;
+  width: 40%;
+  color: white;
+  margin: auto;
+  margin-top: 20px;
+}
