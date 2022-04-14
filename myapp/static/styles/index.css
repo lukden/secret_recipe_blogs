@@ -10,9 +10,9 @@ body {
   padding: 10px;
   margin: 20px;
   display: inline-flex;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: repeat(3, 200px);
   width: 30%;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px;
   border: 0.6mm groove;
   border-radius: 3%;
   border-color: rgb(5, 34, 34);
@@ -22,8 +22,11 @@ body {
 .card-body {
   display: grid;
   color: rgb(0, 0, 0);
-  font-weight: bold;
   font-family: 'Josefin Slab', serif;
+}
+
+.card-title {
+  font-size: 35px;
 }
 
 a {
@@ -33,9 +36,14 @@ a {
   font-size: 25px;
 }
 
+a:hover {
+  color: rgb(114, 82, 82);
+}
+
+
 .jumbotron {
   text-align: center;
-  background-color: #440d0f;
+  background-color: rgb(98, 8, 28);
   padding: 0px;
   width: 20%;
   color: white;
@@ -49,17 +57,17 @@ a {
 }
 
 .recipe-btns {
-  border-color: white;
   display: inline-flex;
-  gap: 100px;
-  padding: 5px;
+  margin: auto;
+  gap: 50px;
 }
 
-.btn.btn-secondary,
-.btn.btn-danger {
+.btn-secondary,
+.btn-danger {
   border-color: white;
   display: inline-flex;
   padding: 10px 15px 10px 15px;
+  
 }
 
 .btn {
@@ -70,6 +78,15 @@ a {
   justify-content: inherit;
   text-align: center;
   gap: 0px;
+  margin: auto;
+  margin-top: 15px;
+
+}
+
+.btn:hover {
+  background-color: rgb(232, 232, 232);
+  color: rgb(104, 7, 28);
+  border-color: rgb(210, 210, 210);
 }
 
 .about {
@@ -112,4 +129,18 @@ a {
   border-radius: 3%;
   border-color: rgb(5, 34, 34);
   opacity: 90%;
+}
+
+.profile-header {
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
+  text-align: center;
+  background-color: #440D0F;
+  padding: 10px;
+  width: 48%;
+  color: white;
+  margin: inherit;
+  margin-top: 20px;
+  border: 1mm inset;
+  border-color: rgb(200, 223, 244);
 }

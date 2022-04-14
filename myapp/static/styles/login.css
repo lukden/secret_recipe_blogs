@@ -5,7 +5,9 @@ body {
 }
 
 .login-form,
-.register {
+.register,
+.account-form,
+.create-recipe {
   text-align: center;
   display: grid;
   background-color: #ffffff;

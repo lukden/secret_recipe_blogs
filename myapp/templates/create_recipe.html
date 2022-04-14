@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/login.css')}}"/>
+<link rel="stylesheet" href="{{url_for('static', filename='./styles/index.css')}}"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
     <div class="container">
-      <form class="form-group" method="POST">
+      <form class="form-group create-recipe" method="POST">
           {{form.hidden_tag()}}
 
           <div class="form-group">
