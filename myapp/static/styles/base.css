@@ -5,8 +5,9 @@
   display: grid;
   grid-template-columns: 200px 200px 200px 200px 200px;
   grid-area: auto;
-  gap: 100px;
+  gap: 4.5em;
   text-align: center;
+  margin: auto;
 }
 
 .nav-link {
@@ -16,4 +17,8 @@
   padding: 0px 10px;
   margin: auto;
 
+}
+
+.nav-btn {
+  text-decoration: none;
 }

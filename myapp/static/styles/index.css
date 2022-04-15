@@ -19,6 +19,8 @@ body {
   opacity: 90%;
 }
 
+
+
 .card-body {
   display: grid;
   color: rgb(0, 0, 0);
@@ -143,4 +145,18 @@ a:hover {
   margin-top: 20px;
   border: 1mm inset;
   border-color: rgb(200, 223, 244);
+}
+
+.user-container {
+  background-color: #ffffffca;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-bottom: 0px;
+  width: 50%;
+  border: 0.6mm groove;
+  border-radius: 2%;
+  border-color: rgb(5, 34, 34);
 }
