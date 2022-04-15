@@ -25,13 +25,13 @@
 
         {% if current_user.is_authenticated %}
         <li class="nav-link">
-            <a href="{{url_for('users.logout')}}">Log Out</a>
+            <a href="{{url_for('recipe_posts.create_recipe')}}">Create Recipe</a> 
         </li>
         <li class="nav-link">
             <a href="{{url_for('users.account')}}">Account</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('recipe_posts.create_recipe')}}">Create Recipe</a> 
+            <a href="{{url_for('users.logout')}}">Log Out</a>
         </li>
         {% else %}
         <li class="nav-link">
