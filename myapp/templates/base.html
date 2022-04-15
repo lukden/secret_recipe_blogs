@@ -22,7 +22,6 @@
         <li class="nav-link">
             <a href="{{url_for('core.info')}}">About</a>
         </li>
-
         {% if current_user.is_authenticated %}
         <li class="nav-link">
             <a href="{{url_for('recipe_posts.create_recipe')}}">Create Recipe</a> 

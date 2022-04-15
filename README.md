@@ -2,6 +2,8 @@
 
 ### Share your favorite recipes and the stories behind them!
 
+<img src="https://i.imgur.com/e21LECi.jpg">
+
 ## Getting Started: 
 
 <p> Check out all of the tastiest recipes! Add your own and share them with family and friends.</p> 
@@ -45,4 +47,5 @@ Add Recipe Form:
   <li>Implement feature for users to save their favorite recipes to a list</li>
   <li>Add image upload functionality</li>
   <li>Update with reviews or likes to gage interest in recipes</li>
+  <li>Create recipe container that displays ingredients and steps as a list</li>
 </ul>
