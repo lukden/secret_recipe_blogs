@@ -7,37 +7,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
-    <link rel="icon" sizes="32x32" href=""
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes!</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%23a2ffed%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2278%22>🥘</text></svg>" />
+    <title>Secret Recipe
+    </title>
 </head>
 <body>
     <ul class="nav">
         <li class="nav-link">
-            <a href="{{url_for('core.index')}}" class="nav-btn">Home</a>
+            <a href="{{url_for('core.index')}}">Home</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('core.info')}}" class="nav-btn">About</a>
+            <a href="{{url_for('core.info')}}">About</a>
         </li>
 
         {% if current_user.is_authenticated %}
         <li class="nav-link">
-            <a href="{{url_for('users.logout')}}" class="nav-btn">Log Out</a>
+            <a href="{{url_for('users.logout')}}">Log Out</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('users.account')}}" class="nav-btn">Account</a>
+            <a href="{{url_for('users.account')}}">Account</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('recipe_posts.create_recipe')}}" class="nav-btn">Create Recipe</a> 
+            <a href="{{url_for('recipe_posts.create_recipe')}}">Create Recipe</a> 
         </li>
         {% else %}
         <li class="nav-link">
             <a href="{{url_for('users.login')}}">Log In</a>
         </li>
         <li class="nav-link">
-            <a href="{{url_for('users.register')}}" class="nav-btn">Register</a>
+            <a href="{{url_for('users.register')}}">Register</a>
         </li>
         {% endif %}
     </ul>

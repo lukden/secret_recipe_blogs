@@ -5,6 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from datetime import datetime
 
+
 #login management 
 # allows us to use this in templates for isUser stuff 
 @login_manager.user_loader
@@ -45,5 +46,5 @@ class RecipePost(db.Model):
         self.user_id = user_id
 
     def __repr__(self):
-        return f"Post ID: {self.id} -- Date: {self.date} --- Title: {self.Title}"
+        return f"Post ID: {self.id} -- Date: {self.date} --- Title: {self.title}"
 
